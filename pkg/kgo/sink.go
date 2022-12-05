@@ -12,9 +12,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/twmb/franz-go/pkg/kbin"
-	"github.com/twmb/franz-go/pkg/kerr"
-	"github.com/twmb/franz-go/pkg/kmsg"
+	"github.com/tdx/franz-go/pkg/kbin"
+	"github.com/tdx/franz-go/pkg/kerr"
+	"github.com/tdx/franz-go/pkg/kmsg"
 )
 
 type sink struct {

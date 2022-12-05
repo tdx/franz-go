@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/prometheus/client_golang v1.12.2
-	github.com/twmb/franz-go v0.8.3
+	github.com/tdx/franz-go v0.8.3
 )
 
 require (
@@ -17,9 +17,9 @@ require (
 	github.com/prometheus/client_model v0.2.0 // indirect
 	github.com/prometheus/common v0.34.0 // indirect
 	github.com/prometheus/procfs v0.7.3 // indirect
-	github.com/twmb/franz-go/pkg/kmsg v1.1.0 // indirect
+	github.com/tdx/franz-go/pkg/kmsg v1.1.0 // indirect
 	golang.org/x/sys v0.0.0-20220614162138-6c1b26c55098 // indirect
 	google.golang.org/protobuf v1.28.0 // indirect
 )
 
-replace github.com/twmb/franz-go => ../../..
+replace github.com/tdx/franz-go => ../../..

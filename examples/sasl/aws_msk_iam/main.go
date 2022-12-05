@@ -14,9 +14,9 @@ import (
 
 	"github.com/aws/aws-sdk-go/aws/session"
 
-	"github.com/twmb/franz-go/pkg/kgo"
-	"github.com/twmb/franz-go/pkg/kmsg"
-	"github.com/twmb/franz-go/pkg/sasl/aws"
+	"github.com/tdx/franz-go/pkg/kgo"
+	"github.com/tdx/franz-go/pkg/kmsg"
+	"github.com/tdx/franz-go/pkg/sasl/aws"
 )
 
 var seedBrokers = flag.String("brokers", "localhost:9092", "comma delimited list of seed brokers")

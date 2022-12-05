@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/twmb/franz-go/pkg/kerr"
-	"github.com/twmb/franz-go/pkg/kgo"
-	"github.com/twmb/franz-go/pkg/kmsg"
+	"github.com/tdx/franz-go/pkg/kerr"
+	"github.com/tdx/franz-go/pkg/kgo"
+	"github.com/tdx/franz-go/pkg/kmsg"
 )
 
 // GroupMemberMetadata is the metadata that a client sent in a JoinGroup request.

@@ -4,8 +4,8 @@ import (
 	"context"
 	"sort"
 
-	"github.com/twmb/franz-go/pkg/kerr"
-	"github.com/twmb/franz-go/pkg/kmsg"
+	"github.com/tdx/franz-go/pkg/kerr"
+	"github.com/tdx/franz-go/pkg/kmsg"
 )
 
 // AlterReplicaLogDirsReq is the input for a request to alter replica log

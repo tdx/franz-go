@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/twmb/franz-go/pkg/kerr"
-	"github.com/twmb/franz-go/pkg/kmsg"
+	"github.com/tdx/franz-go/pkg/kerr"
+	"github.com/tdx/franz-go/pkg/kmsg"
 )
 
 // Principal is a principal that owns or renews a delegation token. This is the

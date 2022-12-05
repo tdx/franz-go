@@ -3,7 +3,7 @@ package kgo
 import (
 	"testing"
 
-	"github.com/twmb/franz-go/pkg/kmsg"
+	"github.com/tdx/franz-go/pkg/kmsg"
 )
 
 func TestMaxVersions(t *testing.T) {

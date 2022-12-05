@@ -4,8 +4,8 @@ go 1.18
 
 require (
 	github.com/aws/aws-sdk-go v1.44.34
-	github.com/twmb/franz-go v0.8.3
-	github.com/twmb/franz-go/pkg/kmsg v1.1.0
+	github.com/tdx/franz-go v0.8.3
+	github.com/tdx/franz-go/pkg/kmsg v1.1.0
 )
 
 require (
@@ -14,4 +14,4 @@ require (
 	github.com/pierrec/lz4/v4 v4.1.14 // indirect
 )
 
-replace github.com/twmb/franz-go => ../../..
+replace github.com/tdx/franz-go => ../../..

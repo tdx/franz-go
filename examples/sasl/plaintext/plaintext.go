@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/twmb/franz-go/pkg/kgo"
+	"github.com/tdx/franz-go/pkg/kgo"
 )
 
 func main() {

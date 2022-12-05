@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-// NOTE: this code is copied from github.com/twmb/go-strftime, with AppendFormat
+// NOTE: this code is copied from github.com/tdx/go-strftime, with AppendFormat
 // being unexported.
 
 // appendFormat appends t to dst according to the input strftime format.

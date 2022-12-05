@@ -12,9 +12,9 @@ import (
 
 	"golang.org/x/crypto/pbkdf2"
 
-	"github.com/twmb/franz-go/pkg/kerr"
-	"github.com/twmb/franz-go/pkg/kmsg"
-	"github.com/twmb/franz-go/pkg/kversion"
+	"github.com/tdx/franz-go/pkg/kerr"
+	"github.com/tdx/franz-go/pkg/kmsg"
+	"github.com/tdx/franz-go/pkg/kversion"
 )
 
 // FindCoordinatorResponse contains information for the coordinator for a group

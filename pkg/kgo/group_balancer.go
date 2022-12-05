@@ -6,9 +6,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/twmb/franz-go/pkg/kerr"
-	"github.com/twmb/franz-go/pkg/kgo/internal/sticky"
-	"github.com/twmb/franz-go/pkg/kmsg"
+	"github.com/tdx/franz-go/pkg/kerr"
+	"github.com/tdx/franz-go/pkg/kgo/internal/sticky"
+	"github.com/tdx/franz-go/pkg/kmsg"
 )
 
 // GroupBalancer balances topics and partitions among group members.

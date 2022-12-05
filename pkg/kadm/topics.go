@@ -4,8 +4,8 @@ import (
 	"context"
 	"sort"
 
-	"github.com/twmb/franz-go/pkg/kerr"
-	"github.com/twmb/franz-go/pkg/kmsg"
+	"github.com/tdx/franz-go/pkg/kerr"
+	"github.com/tdx/franz-go/pkg/kmsg"
 )
 
 // ListTopics issues a metadata request and returns TopicDetails. Specific

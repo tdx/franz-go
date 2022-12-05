@@ -6,7 +6,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/twmb/franz-go/pkg/kbin"
+	"github.com/tdx/franz-go/pkg/kbin"
 )
 
 // Partitioner creates topic partitioners to determine which partition messages

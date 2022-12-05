@@ -7,8 +7,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/twmb/franz-go/pkg/kadm"
-	"github.com/twmb/franz-go/pkg/kgo"
+	"github.com/tdx/franz-go/pkg/kadm"
+	"github.com/tdx/franz-go/pkg/kgo"
 )
 
 var (

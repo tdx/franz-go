@@ -22,9 +22,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/twmb/franz-go/pkg/kerr"
-	"github.com/twmb/franz-go/pkg/kmsg"
-	"github.com/twmb/franz-go/pkg/sasl"
+	"github.com/tdx/franz-go/pkg/kerr"
+	"github.com/tdx/franz-go/pkg/kmsg"
+	"github.com/tdx/franz-go/pkg/sasl"
 )
 
 var crc32c = crc32.MakeTable(crc32.Castagnoli) // record crc's use Castagnoli table; for consuming/producing

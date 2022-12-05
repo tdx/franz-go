@@ -1,6 +1,6 @@
 package sticky
 
-// This file contains a vendoring of github.com/twmb/go-rbtree, with interface
+// This file contains a vendoring of github.com/tdx/go-rbtree, with interface
 // types replaced with *partitionLevel. We do this to simplify (and slightly)
 // speed up the rbtree, get rid of a bunch of code we do not need, and to drop
 // a dep.

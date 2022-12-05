@@ -10,8 +10,8 @@ to worry about when producing is to make sure that you commit or abort
 appropriately, and for consuming, make sure you use the
 [`FetchIsolationLevel`][1] option with [`ReadCommitted`][2] option.
 
-[1]: https://pkg.go.dev/github.com/twmb/franz-go/pkg/kgo#FetchIsolationLevel
-[2]: https://pkg.go.dev/github.com/twmb/franz-go/pkg/kgo#ReadCommitted
+[1]: https://pkg.go.dev/github.com/tdx/franz-go/pkg/kgo#FetchIsolationLevel
+[2]: https://pkg.go.dev/github.com/tdx/franz-go/pkg/kgo#ReadCommitted
 
 For an example of the EOS consumer/producer, see
 [here](../examples/transactions/eos). Because EOS requires much more care to
@@ -22,13 +22,13 @@ necessary (specifically, when a group rebalance happens). This may occasionally
 lead to extra work, but it should prevent consuming, modifying, producing, and
 _committing_ a record twice.
 
-[3]: https://pkg.go.dev/github.com/twmb/franz-go/pkg/kgo#GroupTransactSession
+[3]: https://pkg.go.dev/github.com/tdx/franz-go/pkg/kgo#GroupTransactSession
 
 KIP-447?
 ===
 
 ## The problem
- 
+
 [KIP-447](https://cwiki.apache.org/confluence/display/KAFKA/KIP-447%3A+Producer+scalability+for+exactly+once+semantics)
 bills itself as producer scalability for exactly once semantics. This
 is a KIP to add more safety to EOS.
@@ -57,19 +57,19 @@ before. Specifically, it proposes the following scenario, which I copy here:
 ```
 Two Kafka consumers C1 and C2 each integrate with transactional producers P1
 and P2, each identified by transactional ID T1 and T2, respectively. They
-process data from two input topic partitions tp-0 and tp-1. 
+process data from two input topic partitions tp-0 and tp-1.
 
-At the beginning, the consumer group has the following assignments: 
-(C1, P1 [T1]): tp-0 
-(C2, P2 [T2]): tp-1 
+At the beginning, the consumer group has the following assignments:
+(C1, P1 [T1]): tp-0
+(C2, P2 [T2]): tp-1
 
 P2 commits one transaction that pushes the current offset of tp-1 to 5. Next,
 P2 opens another transaction on tp-1, processes data up to offset 10, and
 begins committing. Before the transaction completes, it crashes, and the group
-rebalances the partition assignment: 
+rebalances the partition assignment:
 
-(C1, P1 [T1]): tp-0, tp-1 
-(C2, P2 [T2]): None 
+(C1, P1 [T1]): tp-0, tp-1
+(C2, P2 [T2]): None
 
 Since there is no such static mapping of T1 to partition tp-0 and T2 to
 partition tp-1, P1 proceeds to start its transaction against tp-1 (using its
@@ -121,9 +121,9 @@ again recreates our problematic scenario. To work around this, the franz-go
 client defaults the transactional timeout to be less than the group session
 timeout. With this, then we have the following order of events:
 
-1) we begin a transaction  
-2) we know that we are still in the group  
-3) either we end the transaction, or we hang long enough that the transaction timeout expires _before_ the member will be booted  
+1) we begin a transaction
+2) we know that we are still in the group
+3) either we end the transaction, or we hang long enough that the transaction timeout expires _before_ the member will be booted
 
 By having the transactional timeout strictly less than the session timeout,
 we know that even if requests hang after our successful heartbeat, then
