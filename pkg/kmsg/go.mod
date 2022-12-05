@@ -1,3 +1,3 @@
 module github.com/tdx/franz-go/pkg/kmsg
 
-go 1.16
+go 1.17
