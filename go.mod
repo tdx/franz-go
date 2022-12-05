@@ -1,6 +1,6 @@
 module github.com/tdx/franz-go
 
-go 1.15
+go 1.18
 
 require (
 	github.com/klauspost/compress v1.15.9
