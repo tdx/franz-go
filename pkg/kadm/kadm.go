@@ -53,6 +53,7 @@
 package kadm
 
 import (
+	"fmt"
 	"regexp"
 	"runtime/debug"
 	"sort"
@@ -115,6 +116,7 @@ func NewOptClient(opts ...kgo.Opt) (*Client, error) {
 
 // Close closes the underlying *kgo.Client.
 func (cl *Client) Close() {
+	fmt.Println("close KAdm client")
 	cl.cl.Close()
 }
 
