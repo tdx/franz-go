@@ -1,10 +1,10 @@
-module github.com/twmb/franz-go/pkg/kadm
+module github.com/tdx/franz-go/pkg/kadm
 
 go 1.17
 
 require (
-	github.com/twmb/franz-go v1.10.1
-	github.com/twmb/franz-go/pkg/kmsg v1.2.0
+	github.com/tdx/franz-go v1.10.1
+	github.com/tdx/franz-go/pkg/kmsg v1.2.0
 	golang.org/x/crypto v0.3.0
 )
 
